@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--
+
+     * Um arquivo de layout XML que define a estrutura de exibição para um item de produto em uma lista.
+     * Exibi os campos nome, descrição e valor de um produto em um ConstraintLayout.
+
+    -->
+    <!--
+    * Um TextView para exibir o nome do produto.
+
+    * @id - Identificador único para o TextView.
+    * @layout_width - A largura do TextView, definida como correspondendo à largura do pai (match_parent).
+    * @layout_height - A altura do TextView, definida como wrap_content ajustar seu tamanho para caber exatamente no conteúdo dentro dele.
+    * @layout_margin -  A margem ao redor do TextView, definida como 16dp.
+    * @textSize -  O tamanho do texto do TextView, definido como 18sp.
+    * @layout_constraintEnd_toEndOf A restrição que define a extremidade do TextView para ser ancorada na extremidade do pai.
+    * @layout_constraintStart_toStartOf - A restrição que define o início do TextView para ser ancorado no início do pai.
+    * @layout_constraintTop_toTopOf - A restrição que define a parte superior do TextView para ser ancorada na parte superior do pai.
+    * @tools:text - Um texto de exemplo usado pelas ferramentas de design para exibir visualmente o TextView no editor, mas não vai aparecer no app.
+
+    -->
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Cesta de frutas" />
+
+
+    <!--
+    *Este TextView mostra a descrição do produto.
+
+    *@id - Identificador único para este TextView.
+    *@layout_width - Largura definida para preencher a largura do contêiner pai.
+    *@layout_height - Altura ajustada dinamicamente ao conteúdo.
+    *@layout_marginStart - Margem à esquerda definida como 16dp.
+    *@layout_marginEnd - Margem à direita definida como 16dp.
+    *@layout_constraintEnd_toEndOf - Ancorado na extremidade do contêiner pai.
+    *@layout_constraintStart_toStartOf - Ancorado no início do contêiner pai.
+    *@layout_constraintTop_toBottomOf - Ancorado abaixo do TextView 'nome'.
+    *@tools:text - Texto de exemplo.
+    -->
+
+    <TextView
+        android:id="@+id/descricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nome"
+        tools:text="Laranja, manga e uva" />
+
+
+    <!--
+    *TextView para mostrar o valor do produto.
+
+    *@id - Identificador único.
+    *@layout_width - Largura preenchendo o contêiner pai.
+    *@layout_height - Altura ajustada ao conteúdo.
+    *@layout_marginStart - Margem à esquerda definida como 16dp.
+    *@layout_marginEnd - Margem à direita definida como 16dp.
+    *@layout_constraintEnd_toEndOf - Ancorado na extremidade do contêiner pai.
+    *@layout_constraintStart_toStartOf - Ancorado no início do contêiner pai.
+    *@layout_constraintTop_toBottomOf - Ancorado abaixo do TextView 'descricao'.
+    *@tools:text - Texto de exemplo.
+    -->
+
+    <TextView
+        android:id="@+id/valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descricao"
+        tools:text="19.99" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
