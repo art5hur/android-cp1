@@ -65,17 +65,17 @@ class MainActivity : Activity() {
                 Produto(
                     "Teste 0",
                     "Teste Descrição 0",
-                    BigDecimal("19.90")
+                    BigDecimal("40.00")
                 ),
                 Produto(
                     "Teste 1",
                     "Teste Descrição 1",
-                    BigDecimal("29.90")
+                    BigDecimal("25.00")
                 ),
                 Produto(
                     "Teste 2",
                     "Teste Descrição 2",
-                    BigDecimal("39.90")
+                    BigDecimal("49.99")
                 ),
             )
         )
