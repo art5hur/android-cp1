@@ -8,7 +8,7 @@ import java.math.BigDecimal
 */
 
 /*
- No Android Studio, ao passar essa clase "Produto ()", os parenteses já fazem automaticamente os
+ No Android Studio, ao passar essa clase "Produto ()", já é feito automaticamente os
  getters and setters da classe.
 */
 
