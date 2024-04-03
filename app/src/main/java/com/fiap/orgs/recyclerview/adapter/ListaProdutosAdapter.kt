@@ -20,8 +20,8 @@ import com.fiap.orgs.model.Produto
 
 /*
  Constrói um novo adapter para exibir a lista de produtos fornecida.
- context - é o contexto da aplicação
- produtos - é a lista de produtos a ser exibida
+ context - é o contexto da aplicação;
+ produtos - é a lista de produtos a ser exibida.
 */
 
 class ListaProdutosAdapter(
@@ -42,7 +42,7 @@ class ListaProdutosAdapter(
 
         /*
          Vincula os dados do produto ao item de visualização
-         produto - O produto a ser exibido
+         produto - O produto a ser exibido.
          */
 
         fun vincula(produto: Produto) {
