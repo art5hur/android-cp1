@@ -9,7 +9,7 @@ import com.fiap.orgs.recyclerview.adapter.ListaProdutosAdapter
 import java.math.BigDecimal
 
 /*
- Classe MainActivity representa a classe principal do app.
+ Classe br.com.fiap.orgs.activity.MainActivity representa a classe principal do app.
  Ela herda de ComponentActivity, que é uma classe fornecida pelo framework Android Jetpack.
  Esta atividade exibe uma lista de produtos em um RecyclerView.
  */
@@ -18,8 +18,8 @@ class MainActivity : Activity() {
 
     /*
     --OnCreate:
-     Método onCreate é chamado quando a atividade é criada. É sobrescrito o método onCreate(),
-     que é um método de ciclo de vida de uma atividade no Android.
+     É um método de ciclo de vida de uma atividade Android. 
+     Ele é chamado quando a atividade é criada.
      Inicializa a interface do usuário e configura o RecyclerView para exibir a lista de produtos.
      */
 
@@ -50,9 +50,8 @@ class MainActivity : Activity() {
        */
 
         /*
-         Dentro do método onCreate() da MainActivity, a RecyclerView é inicializada e referenciada
+         Dentro do método onCreate() da br.com.fiap.orgs.activity.MainActivity, a RecyclerView é inicializada e referenciada
          através do método findViewById();
-         Binding: É o processo de vinculação do código fonte com o arquivo de layout.
 
          R.id.recyclerView - É o ID da RecyclerView definido no layout activity_main.xml;
 
