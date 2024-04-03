@@ -1,6 +1,6 @@
 # Checkpoint 1 - Android Kotlin Developer
 Membros:
-* Arthur MIranda Santos - RM93023
+* Arthur Miranda Santos - RM93023
 * Renan Bandeira Leite - RM96168
 * Thomas D'ávila Meyer Pflug - RM92915
 ## JavaDoc
