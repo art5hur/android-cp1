@@ -16,7 +16,7 @@
 
      * Um RecyclerView que exibe uma lista de itens.
 
-     * id O identificador único para o RecyclerView.
+     * id - O identificador único para o RecyclerView.
      * layout_width - Largura do RecyclerView, configurada para preencher toda a largura do pai (match_parent).
      * layout_height - Altura do RecyclerView, configurada para preencher toda a altura do pai (match_parent).
      *Restrição que define a parte inferior do RecyclerView para se alinhar com a parte inferior do pai.
@@ -24,7 +24,7 @@
      * layout_constraintBottom_toBottomOf - Restrição que define a parte inferior do RecyclerView para ser ancorada na parte inferior do pai.
      * layout_constraintEnd_toEndOf - Restrição que define a extremidade do RecyclerView para ser ancorada na extremidade do pai.
      * layout_constraintStart_toStartOf - Restrição que define o início do RecyclerView para ser ancorado no início do pai.
-     * layout_constraintTop_toTopOf - R estrição que define a parte superior do RecyclerView para ser ancorada na parte superior do pai.
+     * layout_constraintTop_toTopOf - Restrição que define a parte superior do RecyclerView para ser ancorada na parte superior do pai.
 
      * tools:ignore - Uma indicação para as ferramentas de design ignorarem as restrições ausentes durante a visualização no editor.
      * tools:listitem - Um layout de item de exemplo usado pelas ferramentas de design para exibir visualmente o RecyclerView no editor.
