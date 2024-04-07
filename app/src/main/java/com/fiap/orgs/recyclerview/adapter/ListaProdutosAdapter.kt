@@ -56,6 +56,15 @@ class ListaProdutosAdapter(
             valor.text = produto.valor.toPlainString()
         }
     }
+
+    /*
+    Método onCreateViewHolder: Este método é chamado pelo RecyclerView quando precisa criar um novo ViewHolder para exibir um item da lista.
+    val inflater = LayoutInflater.from(context):   Ele infla o layout do item de lista usando LayoutInflater e retorna uma nova instância do ViewHolder. 
+    O ViewGroup pai no qual o novo ViewHolder será adicionado após ser vinculado a uma visualização.
+    viewType O tipo de visualização do novo ViewHolder.
+    retorna uma nova instância do ViewHolder que contém a visualização inflada do item de lista.
+   */
+   
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -65,9 +74,17 @@ class ListaProdutosAdapter(
         return ListaProdutosAdapter.ViewHolder(view)
     }
 
+    /*
+    Método retorna o número total de itens na lista de produtos.
+    */
     override fun getItemCount(): Int = produtos.size
 
-
+     /*
+      Método é chamado pelo RecyclerView para exibir os dados na posição especificada.
+      Os dados do produto na posição específica são vinculados aos elementos de visualização correspondentes no ViewHolder.
+      holder O ViewHolder que deve ser atualizado, pelo método vincula, para representar o conteúdo do item na posição fornecida.
+      position mostra posição do item na lista de produtos.
+      */
     override fun onBindViewHolder(holder: ListaProdutosAdapter.ViewHolder, position: Int) {
         val produto = produtos[position]
         holder.vincula(produto)
