@@ -45,7 +45,22 @@ class MainActivity : Activity() {
      O super.OnCreate(savedInstanceState) chama a implementação do método onCreate() da classe pai
      (Activity) para garantir que o comportamento padrão seja executado antes de qualquer
      personalização adicional.
+
+     A chamada super.onCreate(savedInstanceState) deve ser a primeira linha dentro do método onCreate() 
+     da sua atividade ou fragmento. Ela é essencial para garantir que a implementação da classe base seja
+     executada antes de qualquer código personalizado que você possa querer adicionar ao método onCreate().
+     
+     A função do super.onCreate(savedInstanceState) é permitir que a classe base execute as inicializações 
+     necessárias para a atividade, como inflar o layout associado à atividade, restaurar o estado anterior 
+     da atividade (se houver) a partir do Bundle fornecido (savedInstanceState), configurar o ambiente de 
+     execução da atividade.
+
+     Ao chamar super.onCreate(savedInstanceState), você está garantindo que a classe base tenha a oportunidade
+     de executar seu próprio código de inicialização antes de você adicionar qualquer lógica personalizada. Isso
+     é crucial para garantir o funcionamento adequado da atividade dentro do ciclo de vida do Android e para manter
+     o comportamento consistente em todo o aplicativo.
      */
+ 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,23 +71,36 @@ class MainActivity : Activity() {
             Criado para substituir a ListView, é um componente que é usado para exibir vários dados de
             forma mais eficiente. Tem a característica de replicar todo o conteúdo até o final da tela.
             A função da RecyclerView aqui é exibir a lista de produtos na tela.
-            É uma boa prática utilizar o recycleview porque melhora o desempenho, flexibilidade e personalização,
-            suporte para diferentes layouts, entre outos benefícios, proporcionando uma experiência de usuário mais fluida e responsiva
-            nos aplicativos Android.
-       */
+            
+            É uma boa prática utilizar o recycleview, porque melhora o desempenho, flexibilidade e personalização,
+            suporte para diferentes layouts, entre outos benefícios, proporcionando uma experiência de usuário mais
+            fluida e responsiva nos aplicativos Android.
 
-        /*
-         Dentro do método onCreate() da MainActivity, a RecyclerView é inicializada e referenciada
-         através do método findViewById();
+            A função principal do RecyclerView é gerenciar a exibição de uma grande quantidade de itens de dados de 
+            maneira eficiente, especialmente quando a lista pode mudar dinamicamente, como ao adicionar ou remover 
+            itens. Ele faz isso implementando um padrão de projeto chamado "View Holder" que reutiliza as visualizações 
+            de itens que não estão visíveis na tela, reduzindo a sobrecarga de memória e melhorando o desempenho.
+                  
+            Dentro do método onCreate() da MainActivity, a RecyclerView é inicializada e referenciada através do método 
+            findViewById();
 
-         R.id.recyclerView - É o ID da RecyclerView definido no layout activity_main.xml;
+            R.id.recyclerView - É o ID da RecyclerView definido no layout activity_main.xml;
 
-         O adapter é o método que atribui o ListaProdutosAdapter à RecyclerView
+            O adapter é o método que atribui o ListaProdutosAdapter à RecyclerView. Além de fornecer os dados a serem 
+            exibidos e criar as visualizações dos itens da lista.
         */
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.adapter = ListaProdutosAdapter(
             context = this,
+         /* 
+             Instanciar a lista de produtos usando a função listOf,  que cria e retorna uma lista imutável contendo os
+             elementos fornecidos como argumentos para a função. Ela é uma forma conveniente de inicializar uma lista 
+             com elementos específicos.
+             Nesta classe, a função listOf está sendo usada para criar uma lista de objetos Produto. Cada chamada de 
+             Produto() dentro da função listOf cria uma instância de Produto com os parâmetros fornecidos (nome, descrição
+             e preço) e adiciona essa instância à lista resultante.
+         */
             produtos = listOf(
                 Produto(
                     "Teste 0",
